@@ -1,0 +1,30 @@
+<html ng-app="dragDrop">
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/bullet.js"></script>
+
+</script>
+</head>
+
+<body ng-controller="dragDropController">
+
+Drag any of the elements below to the left and right of the line.
+
+<div style="clear:both; margin: 0px 0px 10px 0px"></div>
+
+<table droppable-item style="float:left;min-height:127px;min-width:127px;">
+	<tr draggable-item ng-repeat="item in items">
+		<td> I'm a draggable element {{item}} </td>
+	</tr>
+</table>
+
+<div width="400px" height="400px" droppable-item style=" border-style: solid;
+	min-height:127px;min-width:127px;border-width: 0px 0px 0px 2px;float:left;
+	padding: 0px 0px 0px 5px;">  </div>
+
+</body>
+
+</html>
